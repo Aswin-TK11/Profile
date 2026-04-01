@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aswin T K | AI & Data Science Student</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased selection:bg-[#d4a373] selection:text-black">
+
+    <!-- Animated Background Elements -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <div class="retro-grid"></div>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-white text-center">
+            <h1 class="text-4xl font-black mb-2 tracking-tighter">ASWIN T K</h1>
+            <div class="w-48 h-1 bg-white/10 mx-auto overflow-hidden rounded-full">
+                <div id="progress" class="h-full bg-white w-0 transition-all duration-1000"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#050505]/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2 text-white">
+                <i class='bx bx-data text-2xl'></i>
+                <span class="font-black text-xl tracking-tighter">ASWIN</span>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-10 font-semibold text-sm uppercase tracking-widest text-white">
+                <a href="#home" class="hover:text-[#d4a373] transition-colors">Home</a>
+                <a href="#about" class="hover:text-[#d4a373] transition-colors">About</a>
+                <a href="#skills" class="hover:text-[#d4a373] transition-colors">Skills</a>
+                <a href="#education" class="hover:text-[#d4a373] transition-colors">Education</a>
+                <a href="#contact" class="hover:text-[#d4a373] transition-colors">Contact</a>
+                <div id="live-time" class="mono text-[10px] bg-white/10 border border-white/20 text-white px-2 py-1 rounded">00:00:00</div>
+            </div>
+            
+            <!-- Mobile Toggle & Time -->
+            <div class="md:hidden flex items-center gap-4">
+                <div id="live-time-mobile" class="mono text-[10px] bg-white/10 border border-white/20 text-white px-2 py-1 rounded">00:00:00</div>
+                <button onclick="toggleMenu()" class="text-3xl text-white">
+                    <i class='bx bx-menu-alt-right'></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-nav" class="mobile-menu fixed inset-0 bg-[#050505] z-[60] flex flex-col items-center justify-center gap-8 text-white text-3xl font-bold">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-4xl">
+            <i class='bx bx-x'></i>
+        </button>
+        <a href="#home" onclick="toggleMenu()" class="hover:text-[#d4a373]">HOME</a>
+        <a href="#about" onclick="toggleMenu()" class="hover:text-[#d4a373]">ABOUT</a>
+        <a href="#skills" onclick="toggleMenu()" class="hover:text-[#d4a373]">SKILLS</a>
+        <a href="#education" onclick="toggleMenu()" class="hover:text-[#d4a373]">EDUCATION</a>
+        <a href="#contact" onclick="toggleMenu()" class="hover:text-[#d4a373]">CONTACT</a>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
+        
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[70vh] flex flex-col justify-center mb-20">
+            <div class="max-w-4xl">
+                <h2 class="mono text-[#d4a373] text-lg mb-4 italic reveal">// Pursuing BCA in AI & Data Science</h2>
+                <h1 class="text-6xl md:text-9xl font-black leading-[0.9] tracking-tighter mb-8 text-white reveal delay-100">
+                    ASWIN <br> <span class="text-white/20">T K</span>
+                </h1>
+                 <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm shadow-[0_0_15px_rgba(34,197,94,0.1)] w-max reveal delay-200">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <span class="text-[11px] font-bold text-gray-300 tracking-widest uppercase mt-0.5">Open to work</span>
+                </div>
+                <p class="text-xl md:text-2xl font-light leading-relaxed mb-10 text-gray-400 max-w-2xl reveal delay-300">
+                    Aspiring Data Scientist exploring the realms of <span class="text-white font-light decoration-[#d4a373]">Machine Learning</span> and Neural Networks. Based in Ernakulam, Kerala.
+                </p>
+                <div class="flex flex-wrap gap-4 reveal delay-400">
+                    <a href="#contact" class="bg-white text-black px-8 py-4 font-bold btn-pulse inline-flex items-center gap-2 rounded-sm">
+                        <i class='bx bx-envelope'></i> GET IN TOUCH
+                    </a>
+                    <div class="flex gap-2">
+                        <a href="https://github.com/Aswin-TK11" target="_blank" class="glass-card p-4 text-2xl text-white hover:text-[#d4a373]"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/aswin-tk-971522320" target="_blank" class="glass-card p-4 text-2xl text-white hover:text-[#d4a373]"><i class='bx bxl-linkedin-square'></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1 reveal">
+                <div class="glass-card p-8 rounded-lg relative overflow-hidden text-white">
+                    <i class='bx bxs-quote-left absolute top-4 left-4 text-4xl opacity-[0.03] text-white'></i>
+                    <h3 class="text-2xl font-black mb-4">My Aspirations</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Currently studying at <span class="text-white font-bold">Chinmaya Vishwa Vidyapeeth</span>, I am building a strong foundation in statistical analysis and computational intelligence. While I am just starting my professional journey, my academic projects focus on leveraging AI to solve real-world data complexities. I am eager to contribute to data-driven decision making.
+                    </p>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 reveal delay-200">
+                <span class="mono text-xs uppercase tracking-widest text-[#d4a373] font-bold">Biography</span>
+                <h2 class="text-5xl font-black mb-6 text-white">WHO IS <br> ASWIN?</h2>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4 reveal">
+                <h2 class="text-5xl font-black tracking-tighter text-white">SKILLSET</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-white">
+                <!-- Wrapper divs control the scroll reveal while the inner cards handle the hover transitions -->
+                <div class="reveal delay-100">
+                    <div class="glass-card p-6 rounded-sm h-full">
+                        <i class='bx bxl-python text-4xl mb-4 text-white'></i>
+                        <h4 class="font-bold mb-2">Languages</h4>
+                        <p class="text-sm text-gray-400 italic">Python (Primary), SQL, C, Java</p>
+                    </div>
+                </div>
+                <div class="reveal delay-200">
+                    <div class="glass-card p-6 rounded-sm h-full">
+                        <i class='bx bx-brain text-4xl mb-4 text-white'></i>
+                        <h4 class="font-bold mb-2">AI & ML</h4>
+                        <p class="text-sm text-gray-400 italic">Regression, Classification, Neural Networks</p>
+                    </div>
+                </div>
+                <div class="reveal delay-300">
+                    <div class="glass-card p-6 rounded-sm h-full">
+                        <i class='bx bx-line-chart text-4xl mb-4 text-white'></i>
+                        <h4 class="font-bold mb-2">Analytics</h4>
+                        <p class="text-sm text-gray-400 italic">Pandas, NumPy, Matplotlib, Excel</p>
+                    </div>
+                </div>
+                <div class="reveal delay-400">
+                    <div class="glass-card p-6 rounded-sm h-full">
+                        <i class='bx bx-cog text-4xl mb-4 text-white'></i>
+                        <h4 class="font-bold mb-2">Tools</h4>
+                        <p class="text-sm text-gray-400 italic">Git, VS Code, Jupyter, Google Colab, GitHub</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <!-- Education -->
+        <section id="education" class="py-20">
+            <h2 class="text-4xl font-black mb-12 text-center text-white underline decoration-[#d4a373] decoration-4 underline-offset-8 reveal">EDUCATION</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <div class="reveal delay-100">
+                    <div class="flex flex-col md:flex-row gap-6 items-start glass-card p-8 rounded-sm">
+                        <div class="bg-white text-black p-4 rounded-sm text-center min-w-[120px]">
+                            <span class="block text-2xl font-black">2024</span>
+                            <span class="text-xs uppercase font-bold text-gray-600">Present</span>
+                        </div>
+                        <div class="text-white">
+                            <h3 class="text-2xl font-bold">BCA in AI & Data Science</h3>
+                            <p class="text-gray-300 font-semibold flex items-center gap-2 mt-1">
+                                <i class='bx bxs-school text-[#d4a373]'></i> <a href="https://www.cvv.ac.in/" target="_blank" class="hover:text-[#d4a373] transition-colors"> Chinmaya Vishwa Vidyapeeth </a>
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2 flex items-center gap-1">
+                                <a href="https://maps.app.goo.gl/TEetDvWjjWJRqdnb6" target="_blank" class="hover:text-white transition-colors">📍 Anthiyal-Onakkoor Road, Ernakulam, Kerala</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="bg-[#111111] border border-white/10 text-white p-10 md:p-20 rounded-2xl relative overflow-hidden reveal">
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-5xl font-black mb-6">LET'S CONNECT</h2>
+                        <p class="text-gray-400 mb-10 max-w-sm">
+                            I'm currently looking for internships and collaborative data projects. Feel free to reach out!
+                        </p>
+                        <div class="space-y-6">
+                            <a href="mailto:tkaswin11@gmail.com" class="flex items-center gap-4 hover:text-[#d4a373] transition-colors">
+                                <i class='bx bx-mail-send text-3xl'></i>
+                                <div>
+                                    <p class="text-[10px] uppercase tracking-widest text-gray-500">Email</p>
+                                    <p class="font-bold">tkaswin11@gmail.com</p>
+                                </div>
+                            </a>
+                            <a href="tel:+918330050733" class="flex items-center gap-4 hover:text-[#d4a373] transition-colors">
+                                <i class='bx bx-phone-call text-3xl'></i>
+                                <div>
+                                    <p class="text-[10px] uppercase tracking-widest text-gray-500">Phone</p>
+                                    <p class="font-bold">+91 8330050733</p>
+                                </div>
+                            </a>
+                            <a href="https://maps.app.goo.gl/79KJ87njtHeMUCDF7" class="flex items-center gap-4 hover:text-[#d4a373] transition-colors">
+                               <i class='bx bx-map text-3xl'></i>
+                               <div>
+                                  <p class="text-[10px] uppercase tracking-widest text-gray-500">Location</p>
+                                  <p class="font-bold">Malappuram, Kerala, India</p>
+                               </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center gap-4">
+                        <div class="bg-white/5 p-6 border border-white/10 rounded-lg">
+                            <p class="mono text-xs mb-4 text-gray-400">// Find me on socials</p>
+                            <div class="flex gap-4">
+                                <a href="https://www.linkedin.com/in/aswin-tk-971522320" target="_blank" class="bg-white/10 border border-white/10 text-white w-12 h-12 flex items-center justify-center rounded text-2xl hover:bg-[#d4a373] hover:text-black transition-all">
+                                    <i class='bx bxl-linkedin'></i>
+                                </a>
+                                <a href="https://github.com/Aswin-TK11" target="_blank" class="bg-white/10 border border-white/10 text-white w-12 h-12 flex items-center justify-center rounded text-2xl hover:bg-[#d4a373] hover:text-black transition-all">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Background decoration -->
+                <i class='bx bx-objects-vertical-bottom absolute -bottom-10 -right-10 text-[20rem] opacity-[0.02] text-white pointer-events-none'></i>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer visibility fixed for mobile -->
+    <footer class="pt-10 pb-16 text-center border-t border-white/10">
+        <p class="text-xs uppercase tracking-[0.4em] text-gray-500">Aswin T K &copy; 2026 • All Rights Reserved • Built with curiosity</p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
