@@ -1,4 +1,4 @@
- // 1. Loader Logic
+        // 1. Loader Logic
         window.addEventListener('load', () => {
             const bar = document.getElementById('progress');
             bar.style.width = '100%';
@@ -13,7 +13,7 @@
             menu.classList.toggle('open');
         }
 
-        // 3. Live Clock (Updated to target both desktop and mobile clocks)
+        // 3. Live Clock (Targeting desktop and mobile clocks)
         function updateClock() {
             const now = new Date();
             const timeString = now.toLocaleTimeString('en-IN', { hour12: false });
@@ -36,7 +36,8 @@
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (window.pageYOffset >= sectionTop - 150) {
+                // Adjusted threshold for better mobile detection
+                if (window.pageYOffset >= sectionTop - 250) {
                     current = section.getAttribute('id');
                 }
             });
@@ -52,8 +53,8 @@
         // 5. Intersection Observer for Scroll Animations
         const observerOptions = {
             root: null,
-            rootMargin: '0px 0px -50px 0px', 
-            threshold: 0.15 
+            rootMargin: '0px 0px -20px 0px', 
+            threshold: 0.10 // Lowered threshold so elements reveal earlier on mobile
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
