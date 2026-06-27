@@ -80,7 +80,7 @@ This portfolio reflects my journey as I continue to:
 
 - 🌐 Portfolio: https://aswin-tk11.github.io/Profile/
 - 💻 GitHub: https://github.com/Aswin-TK11
-- 💼 LinkedIn: in/aswin-tk-971522320
+- 💼 LinkedIn: linkedin.com/in/aswin-t-k-971522320
 - 🧩 LeetCode: *(Add your LeetCode profile URL)*
 
 ---
